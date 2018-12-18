@@ -5,7 +5,7 @@ import state from "./state";
 
 const webAuth = new auth0.WebAuth({
   domain: AUTH_CONFIG.domain,
-  redirectUri: "http://localhost:3000/callback",
+  redirectUri: AUTH_CONFIG.callbackUrl,
   clientID: AUTH_CONFIG.clientId,
   responseType: "id_token",
   scope: "openid profile email"
@@ -33,7 +33,7 @@ class AuthService extends EventEmitter {
     this.profile = null;
 
     webAuth.logout({
-      returnTo: process.env.VUE_APP_URI
+      returnTo: `${window.location.origin}`
     });
 
     this.emit(loginEvent, { loggedIn: false });
