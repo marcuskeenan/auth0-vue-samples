@@ -9,7 +9,7 @@ WORKDIR /app
 
 COPY package.json .
 
-RUN npm install --silent
+RUN npm install
 
 COPY . .
 
@@ -29,7 +29,7 @@ COPY --from=build /app/server.js .
 
 ENV NODE_ENV production
 
-RUN npm install --silent --production
+RUN npm install --production
 
 EXPOSE 3000
 

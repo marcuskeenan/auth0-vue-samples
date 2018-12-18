@@ -10,11 +10,11 @@
   "dependencies": {
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "samples-bootstrap-theme": "github:auth0-samples/samples-bootstrap-theme"
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "samples-bootstrap-theme": "github:auth0-samples/samples-bootstrap-theme",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/vue-fontawesome": "^0.1.2",
     "@vue/cli-plugin-babel": "^3.0.5",
