@@ -4,14 +4,14 @@ import router from "./router";
 import AuthPlugin from "./plugins/auth";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 Vue.use(AuthPlugin);
 
 Vue.config.productionTip = false;
 
-library.add(faUser);
+library.add(faUser, faLink);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
