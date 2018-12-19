@@ -17,7 +17,7 @@
 <script>
 import "jquery";
 import "samples-bootstrap-theme";
-import "../node_modules/samples-bootstrap-theme/dist/css/auth0-theme.css";
+import "samples-bootstrap-theme/dist/css/auth0-theme.css";
 
 import NavBar from "./components/NavBar";
 

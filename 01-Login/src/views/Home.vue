@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="text-center">
-      <img class="vue-logo" src="/logo.png" alt="Vue.js logo">
+    <div class="text-center hero">
+      <img class="mb-3 app-logo" src="/logo.png" alt="Vue.js logo">
       <h1 class="mb-4">Vue.js Sample Project</h1>
       <p class="lead">
         This is a sample application that demonstrates an authentication flow for an SPA, using
@@ -71,45 +71,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p {
-  &.lead {
-    margin-bottom: 10rem;
-
-    a {
-      font-weight: 500;
-    }
-  }
-}
-
-.vue-logo {
-  max-width: 120px;
-}
-
 .next-steps {
-  padding: 0 32px;
-
-  h2 {
-    margin-bottom: 4rem;
-  }
-
   .fa-link {
     margin-right: 5px;
-  }
-
-  .row {
-    margin-bottom: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .next-steps {
-    .row {
-      margin-bottom: 0;
-    }
-
-    h6 {
-      margin-top: 1.5rem;
-    }
   }
 }
 </style>
