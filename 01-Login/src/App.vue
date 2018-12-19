@@ -42,29 +42,32 @@
 <script>
 import AuthService from './auth/AuthService'
 
-const auth = new AuthService()
-
 export default {
   name: 'app',
   data () {
     return {
-      auth,
-      authenticated: auth.authenticated
+      auth: null,
+      authenticated: false
     }
   },
   created () {
-    auth.authNotifier.on('authChange', authState => {
+    this.auth = new AuthService()
+    this.authenticated = this.auth.isAuthenticated()
+
+    this.auth.authNotifier.on('authChange', authState => {
       this.authenticated = authState.authenticated
     })
 
-    auth.renewSession()
+    if (this.auth.isAuthenticated()) {
+      this.auth.renewSession()
+    }
   },
   methods: {
     login () {
-      auth.login()
+      this.auth.login()
     },
     logout () {
-      auth.logout()
+      this.auth.logout()
     }
   }
 }
